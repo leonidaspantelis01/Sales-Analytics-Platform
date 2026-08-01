@@ -45,3 +45,21 @@ FROM superstore
 GROUP BY `Product Name`
 ORDER BY Total_Quantity DESC
 LIMIT 10;
+============================================================
+Business Question 8
+
+Products with Total Sales greater than €20,000
+
+New SQL Concept:
+HAVING
+
+============================================================
+*/
+
+SELECT
+    `Product Name`,
+    ROUND(SUM(Sales), 2) AS Total_Sales
+FROM superstore
+GROUP BY `Product Name`
+HAVING SUM(Sales) > 20000
+ORDER BY Total_Sales DESC;
