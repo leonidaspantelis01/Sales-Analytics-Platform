@@ -30,3 +30,12 @@ FROM superstore
 GROUP BY `Product Name`
 ORDER BY Total_Profit DESC
 LIMIT 10;
+/*
+============================================================
+Business Question 7
+
+Top 10 Products by Quantity Sold
+
+============================================================
+*/
+
