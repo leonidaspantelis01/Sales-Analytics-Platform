@@ -49,10 +49,6 @@ LIMIT 10;
 Business Question 8
 
 Products with Total Sales greater than €20,000
-
-New SQL Concept:
-HAVING
-
 ============================================================
 */
 
@@ -63,3 +59,19 @@ FROM superstore
 GROUP BY `Product Name`
 HAVING SUM(Sales) > 20000
 ORDER BY Total_Sales DESC;
+/*
+============================================================
+Business Question 9
+
+Top Products by Sales in the West Region
+============================================================
+*/
+
+SELECT
+    `Product Name`,
+    ROUND(SUM(Sales),2) AS Total_Sales
+FROM superstore
+WHERE Region = 'West'
+GROUP BY `Product Name`
+ORDER BY Total_Sales DESC
+LIMIT 10;
