@@ -12,3 +12,19 @@ FROM superstore
 GROUP BY `Customer Name`
 ORDER BY Total_Sales DESC
 LIMIT 10;
+/*
+============================================================
+Business Question 3
+
+Top 10 Customers by Total Profit
+
+============================================================
+*/
+
+SELECT
+    `Customer Name`,
+    ROUND(SUM(Profit), 2) AS Total_Profit
+FROM superstore
+GROUP BY `Customer Name`
+ORDER BY Total_Profit DESC
+LIMIT 10;
