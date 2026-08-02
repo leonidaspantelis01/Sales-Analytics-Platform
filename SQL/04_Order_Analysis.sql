@@ -61,3 +61,18 @@ SELECT
 FROM superstore
 GROUP BY `Ship Mode`
 ORDER BY Total_Sales DESC;
+/*
+==========================================================
+Business Question 14
+
+Average Quantity per Order
+==========================================================
+*/
+
+SELECT
+    ROUND(
+        SUM(Quantity) /
+        COUNT(DISTINCT `Order ID`),
+        2
+    ) AS Average_Items_Per_Order
+FROM superstore;
