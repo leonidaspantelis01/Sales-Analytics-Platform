@@ -29,3 +29,21 @@ SELECT
         2
     ) AS Average_Order_Value
 FROM superstore;
+/*
+==========================================================
+Business Question 12
+
+Top 10 Largest Orders by Sales
+==========================================================
+*/
+
+SELECT
+    `Order ID`,
+    `Customer Name`,
+    ROUND(SUM(Sales), 2) AS Order_Value
+FROM superstore
+GROUP BY
+    `Order ID`,
+    `Customer Name`
+ORDER BY Order_Value DESC
+LIMIT 10;
