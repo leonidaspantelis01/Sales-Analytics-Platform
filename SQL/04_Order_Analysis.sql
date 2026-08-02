@@ -47,3 +47,17 @@ GROUP BY
     `Customer Name`
 ORDER BY Order_Value DESC
 LIMIT 10;
+/*
+==========================================================
+Business Question 13
+
+Sales by Shipping Mode
+==========================================================
+*/
+
+SELECT
+    `Ship Mode`,
+    ROUND(SUM(Sales), 2) AS Total_Sales
+FROM superstore
+GROUP BY `Ship Mode`
+ORDER BY Total_Sales DESC;
