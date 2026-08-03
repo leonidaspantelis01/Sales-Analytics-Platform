@@ -44,3 +44,8 @@ FROM superstore
 GROUP BY `Customer Name`
 ORDER BY Total_Orders DESC
 LIMIT 10;
+SELECT
+    `Order Date`,
+    STR_TO_DATE(`Order Date`, '%m/%d/%Y') AS Test_Date
+FROM superstore
+LIMIT 10;
